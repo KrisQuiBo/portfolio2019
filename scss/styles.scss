@@ -67,6 +67,7 @@ a {
 }
 p {
   font-size: .95rem;
+   word-break: break-all;
 }
 
 
@@ -95,6 +96,10 @@ p {
    margin-bottom: 2rem;
    transform: rotate(21deg);
    font-size: 2rem;
+   @media(min-width: $media-break-tab) {
+     margin-bottom: 0;
+   }
+
  }
  // body::before {
  //     content: "";
@@ -140,7 +145,8 @@ p {
    border-bottom: 1px solid #ccc;
    padding-bottom: 0.5rem;
    @media(min-width: $media-break-tab) {
-      @include flex-it;
+      @include flex-it($just: flex-end);
+      width: 60%;
    }
  }
  nav a:nth-child(3n){
@@ -256,29 +262,33 @@ nav a:hover {
                 ****/
 
 main {
-  @include center(94%);
+  @include center(99%);
 }
 .cards-container {
-
   background: transparent;
-  @media(min-width: $media-break-tab) {
-    display: grid;
-grid-template-columns: repeat(3, 1fr);
-/* width: 70vw; */
-background: transparent;
-  }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  // @media(min-width: $media-break-tab) {
+  //
+  //   grid-template-columns: repeat(2, 50%);
+  //   /* width: 70vw; */
+  //   background: transparent;
+  // }
+  // @media(min-width: $media-break-desk) {
+  //   grid-template-columns: repeat(3,29%);
+  // }
 }
 
 .card {
-display: flex;
+  display: flex;
   // width: 80vw;
   // height: auto;
   margin-left: 0vw;
   margin-right: auto;
   max-width: 50rem;
-  // @media(min-width: $media-break-tab) {
-  //   width: 65vw;
-  // }
+  @media(min-width: $media-break-tab) {
+    // width: 65vw;
+  }
 }
 // .card:nth-of-type(2n) {
 //   display: flex;
@@ -302,7 +312,10 @@ display: flex;
   padding: 1.5rem;
   border: 1px solid #ccc;
   margin: .5rem;
-  width: 100%;
+  // width: 100%;
+  @media(min-width: $media-break-tab) {
+    // width: 45vw;
+  }
 }
 svg {
   margin: .7rem;
@@ -316,6 +329,16 @@ h1 {
   font-size: 4vw;
   line-height: 3.75vw;
   border-bottom: 1px solid #333;
+  @media(min-width: $media-break-tab) {
+    font-size: 3vw;
+    line-height: 2.75vw;
+  }
+  @media(min-width: $media-break-desk) {
+    font-size: 2.2vw;
+    line-height: 2vw;
+    top: 3%;
+    left: 3%;
+  }
 }
 .connect {
   transform: rotate(21deg);
@@ -334,6 +357,9 @@ left: 5%;
 }
 .contact a {
   margin-right: 2%;
+}
+.text-insert {
+  // width: 70vw;
 }
 .text-insert a {
   color: #333;
@@ -361,6 +387,16 @@ left: 5%;
    // background-color: #ccc;
    background: url(../imgs/KQBportrait.jpg);
    background-size: 64.5vw;
+   @media(min-width: $media-break-tab) {
+     width: 35vw;
+     height: 35vw;
+     background-size: 45vw;
+   }
+   @media(min-width: $media-break-desk) {
+     width: 25vw;
+     height: 25vw;
+     background-size: 35vw;
+   }
  }
 .polyg-border {
   position: relative;
@@ -371,6 +407,14 @@ left: 5%;
   // margin-left: -10%;
   clip-path: polygon(50% 12%, 85% 25%, 85% 75%, 50% 88%, 15% 75%, 15% 25%);
   background-color: #ccc;
+  @media(min-width: $media-break-tab) {
+    width: 35vw;
+    height: 35vw;
+  }
+  @media(min-width: $media-break-desk) {
+    width: 25vw;
+    height: 25vw;
+  }
 }
 .rotate-it {
   transform: rotate(12deg);
