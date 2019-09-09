@@ -43,7 +43,6 @@ header {
     display: flex;
     justify-content: space-between;
     text-align: center;
-    position: relative;
   }
 }
 
@@ -64,8 +63,10 @@ nav {
   margin-left: auto;
   margin-right: auto;
   margin-top: 1.5rem;
+  position: relative;
   max-width: 2680px;
   margin-bottom: 1.5rem;
+  position: relative;
   border-bottom: 1px solid #ccc;
   padding-bottom: 0.5rem;
 }
@@ -93,11 +94,6 @@ nav a {
   padding: 2%;
   height: fit-content;
 }
-@media (min-width: 769px) {
-  nav a {
-    margin-right: 0.5rem;
-  }
-}
 
 nav a:hover {
   background-color: #ccc;
@@ -109,39 +105,16 @@ nav a:hover {
 .work-examples {
   display: flex;
   flex-direction: column;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.8);
   text-align: left;
   position: absolute;
   z-index: 100;
-  top: -195%;
+  bottom: 750%;
   left: 68%;
   transition: all 1000ms ease-in-out 300ms;
 }
-@media (min-width: 1024px) {
-  .work-examples {
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    top: 0%;
-    left: 130%;
-  }
-}
 
 .work-examples.active {
-  top: 23%;
-}
-@media (min-width: 769px) {
-  .work-examples.active {
-    top: 90%;
-    right: 0;
-  }
-}
-@media (min-width: 1024px) {
-  .work-examples.active {
-    bottom: -50%;
-    left: -2%;
-  }
+  bottom: -1300%;
 }
 
 .work-examples a {
@@ -153,7 +126,6 @@ a.example {
   width: 100%;
   padding: 2%;
   opacity: 1;
-  font-size: 0.9rem;
 }
 
 a.example.active {
@@ -197,20 +169,6 @@ a.example.active:hover {
   text-align: left;
 }
 
-.up {
-  grid-column: 1/2;
-}
-@media (min-width: 769px) {
-  .up {
-    grid-column: 1/3;
-  }
-}
-@media (min-width: 1024px) {
-  .up {
-    grid-column: 1/4;
-  }
-}
-
 /*****
 ***** CARDS     ****
                 ****/
@@ -219,7 +177,6 @@ main {
   max-width: 2680px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10%;
 }
 
 .cards-container {
@@ -245,7 +202,7 @@ svg {
   margin: 0.7rem;
 }
 
-.tiltHeadline {
+h1 {
   transform: rotate(-21deg);
   position: absolute;
   top: 3%;
@@ -255,13 +212,13 @@ svg {
   border-bottom: 1px solid #333;
 }
 @media (min-width: 769px) {
-  .tiltHeadline {
+  h1 {
     font-size: 3vw;
     line-height: 2.75vw;
   }
 }
 @media (min-width: 1024px) {
-  .tiltHeadline {
+  h1 {
     font-size: 2.2vw;
     line-height: 2vw;
     top: 3%;
@@ -269,8 +226,11 @@ svg {
   }
 }
 
-h2 {
-  text-align: right;
+.connect {
+  transform: rotate(21deg);
+  position: absolute;
+  top: 80%;
+  left: 5%;
 }
 
 .gitH path,
@@ -286,10 +246,6 @@ h2 {
 
 .contact a {
   margin-right: 2%;
-}
-
-.find {
-  text-align: right;
 }
 
 .text-insert a {
