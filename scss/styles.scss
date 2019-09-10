@@ -422,6 +422,7 @@ h2 {
   height: 44.5vw;
   float: left;
   // margin-left: -10%;
+  -webkit-clip-path: polygon(50% 12%, 85% 25%, 85% 75%, 50% 88%, 15% 75%, 15% 25%);
   clip-path: polygon(50% 12%, 85% 25%, 85% 75%, 50% 88%, 15% 75%, 15% 25%);
   background-color: #ccc;
   @media(min-width: $media-break-tab) {
