@@ -178,8 +178,7 @@ p {
    }
    display: grid;
     text-align: center;
-   margin: 1rem;
-
+    margin: 1rem;
    color: #555;
    padding: 1.5rem;
  }
@@ -376,16 +375,7 @@ main {
 .cards-container {
   background: transparent;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  // @media(min-width: $media-break-tab) {
-  //
-  //   grid-template-columns: repeat(2, 50%);
-  //   /* width: 70vw; */
-  //   background: transparent;
-  // }
-  // @media(min-width: $media-break-desk) {
-  //   grid-template-columns: repeat(3,29%);
-  // }
+  grid-template-columns: repeat(auto-fit, minmax(465px, 1fr));
 }
 
 .card {
@@ -476,7 +466,7 @@ h2 {
 }
 
 .contact{
-  @include flex-it($just: center);
+  @include flex-it($just: flex-end);
 }
 
 /*****
