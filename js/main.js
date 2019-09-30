@@ -29,35 +29,35 @@ window.addEventListener('DOMContentLoaded', (e) => {
   });
 
   function menuFix() {
-    if (document.documentElement.scrollTop > 80) {
+    if (document.documentElement.scrollTop > 80 || document.body.scrollTop > 80) {
       document.getElementById('tilt').classList.remove('tilt');
       document.getElementById('tilt').classList.add('tiltStart');
-    } else if (document.documentElement.scrollTop < 80) {
+    } else if (document.documentElement.scrollTop < 80 || document.body.scrollTop < 80) {
         document.getElementById('tilt').classList.add('tilt');
         document.getElementById('tilt').classList.remove('tiltStart');
       }
   }
 
   function scrollHighlight() {
-    if (document.documentElement.scrollTop > 200) {
+    if (document.documentElement.scrollTop > 200 || document.body.scrollTop > 200) {
       document.querySelector('.myName').classList.add('highlightName');
-    } else if (document.documentElement.scrollTop < 155){
+    } else if (document.documentElement.scrollTop < 155 || document.body.scrollTop < 155){
       document.querySelector('.myName').classList.remove('highlightName');
     }
   }
 
   function scrollBorder() {
-    if (document.documentElement.scrollTop > 660) {
+    if (document.documentElement.scrollTop > 660 || document.body.scrollTop > 660) {
       document.querySelector('.skills').classList.add('highlight');
-    } else if (document.documentElement.scrollTop < 955){
+    } else if (document.documentElement.scrollTop < 955 || document.body.scrollTop < 955){
       document.querySelector('.skills').classList.remove('highlight');
     }
   }
 
   function scrollSlide() {
-    if (document.documentElement.scrollTop > 775) {
+    if (document.documentElement.scrollTop > 775 || document.body.scrollTop > 775) {
       document.querySelector('.portHeader').classList.add('slideOver');
-    } else if (document.documentElement.scrollTop < 600) {
+    } else if (document.documentElement.scrollTop < 600 || document.body.scrollTop < 600) {
       document.querySelector('.portHeader').classList.remove('slideOver');
     }
   }
