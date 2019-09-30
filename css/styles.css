@@ -80,7 +80,6 @@ nav {
   margin-left: auto;
   margin-right: auto;
   margin-top: 1.5rem;
-  max-width: 2680px;
   margin-bottom: 1.5rem;
   border-bottom: 1px solid #ccc;
   padding-bottom: 0.5rem;
@@ -286,14 +285,13 @@ main {
 }
 .cards-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(465px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(414px, 1fr));
 }
 
 .card {
   display: flex;
   margin-left: 0vw;
   margin-right: auto;
-  max-width: 50rem;
 }
 
 .container {
