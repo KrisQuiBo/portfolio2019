@@ -4,6 +4,10 @@
 /*maps*/
 /* mixins */
 /* DOM element styles */
+* {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -284,14 +288,18 @@ main {
   margin: 2.5rem;
 }
 .cards-container {
+  width: 100%;
+  max-width: 2680px;
+  margin-left: auto;
+  margin-right: auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(414px, 1fr));
 }
 
 .card {
   display: flex;
   margin-left: 0vw;
   margin-right: auto;
+  width: 100%;
 }
 
 .container {
@@ -331,7 +339,7 @@ main {
   color: #656565;
   background-color: aliceblue;
   border: 2px solid tomato;
-  transition: 0.7s ease-in;
+  transition: 0.5s ease-in;
   width: max-content;
   margin-left: auto;
   margin-right: auto;
@@ -357,7 +365,7 @@ svg {
 }
 @media (min-width: 1024px) {
   .tiltHeadline {
-    font-size: 2.2vw;
+    font-size: 2vw;
     line-height: 2vw;
     top: 3%;
     left: 3%;
@@ -421,6 +429,7 @@ h2 {
   background: aliceblue;
   padding: 2%;
   margin-bottom: 0;
+  margin-top: 0;
   letter-spacing: -0.3rem;
 }
 
@@ -478,10 +487,11 @@ h2 {
 .polyg-border {
   position: relative;
   shape-outside: polygon(50% 7%, 90% 25%, 90% 75%, 50% 93%, 10% 75%, 10% 25%);
-  width: 44.5vw;
-  height: 44.5vw;
+  width: 30.5vw;
+  height: 30.5vw;
   float: left;
-  margin-left: -2vw;
+  margin-left: 2vw;
+  margin-top: 2vw;
   -webkit-clip-path: polygon(50% 12%, 85% 25%, 85% 75%, 50% 88%, 15% 75%, 15% 25%);
   clip-path: polygon(50% 12%, 85% 25%, 85% 75%, 50% 88%, 15% 75%, 15% 25%);
   background-color: #ccc;
@@ -494,8 +504,9 @@ h2 {
 }
 @media (min-width: 1024px) {
   .polyg-border {
-    width: 25vw;
-    height: 25vw;
+    width: 18vw;
+    height: 18vw;
+    margin-left: 0;
   }
 }
 

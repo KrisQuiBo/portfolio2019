@@ -55,6 +55,9 @@ $breakpoints: (
     }
 
 /* DOM element styles */
+* {
+  box-sizing: border-box;
+}
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -427,8 +430,14 @@ main {
 
 .cards-container {
   // background: transparent;
+  @include center(100%);
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(414px, 1fr));
+  // grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+  // @media(min-width: $media-break-tab) {
+  //   grid-template-columns: repeat(auto-fit, minmax(414px, 1fr));
+  //
+  //   // grid-gap: 1vw;
+  // }
 }
 
 .card {
@@ -437,6 +446,7 @@ main {
   // height: auto;
   margin-left: 0vw;
   margin-right: auto;
+  width: 100%;
   // max-width: 50rem;
 }
 .container {
@@ -474,7 +484,7 @@ main {
   color: #656565;
   background-color: $alice;
   border: 2px solid $highlight;
-  transition: .7s ease-in;
+  transition: .5s ease-in;
   width: max-content;
   margin-left: auto;
   margin-right: auto;
@@ -496,7 +506,7 @@ svg {
     line-height: 2.75vw;
   }
   @media(min-width: $media-break-desk) {
-    font-size: 2.2vw;
+    font-size: 2vw;
     line-height: 2vw;
     top: 3%;
     left: 3%;
@@ -549,6 +559,7 @@ h2 {
   background: $alice;
   padding: 2%;
   margin-bottom: 0;
+  margin-top: 0;
   letter-spacing: -0.3rem;
 
 }
@@ -604,11 +615,11 @@ h2 {
 .polyg-border {
   position: relative;
   shape-outside: polygon(50% 7%, 90% 25%, 90% 75%, 50% 93%, 10% 75%, 10% 25%);
-  width: 44.5vw;
-  height: 44.5vw;
+  width: 30.5vw;
+  height: 30.5vw;
   float: left;
-  margin-left: -2vw;
-  // margin-left: -10%;
+  margin-left: 2vw;
+  margin-top: 2vw;
   -webkit-clip-path: polygon(50% 12%, 85% 25%, 85% 75%, 50% 88%, 15% 75%, 15% 25%);
   clip-path: polygon(50% 12%, 85% 25%, 85% 75%, 50% 88%, 15% 75%, 15% 25%);
   background-color: #ccc;
@@ -617,8 +628,9 @@ h2 {
     height: 35vw;
   }
   @media(min-width: $media-break-desk) {
-    width: 25vw;
-    height: 25vw;
+    width: 18vw;
+    height: 18vw;
+    margin-left: 0;
   }
 }
 .rotate-it {

@@ -47,7 +47,7 @@ window.addEventListener('DOMContentLoaded', (e) => {
   }
 
   function scrollBorder() {
-    if (document.documentElement.scrollTop > 660 || document.body.scrollTop > 660) {
+    if (document.documentElement.scrollTop > 1060 || document.body.scrollTop > 1260) {
       document.querySelector('.skills').classList.add('highlight');
     } else if (document.documentElement.scrollTop < 955 || document.body.scrollTop < 955){
       document.querySelector('.skills').classList.remove('highlight');
@@ -55,7 +55,7 @@ window.addEventListener('DOMContentLoaded', (e) => {
   }
 
   function scrollSlide() {
-    if (document.documentElement.scrollTop > 775 || document.body.scrollTop > 775) {
+    if (document.documentElement.scrollTop > 975 || document.body.scrollTop > 975) {
       document.querySelector('.portHeader').classList.add('slideOver');
     } else if (document.documentElement.scrollTop < 600 || document.body.scrollTop < 600) {
       document.querySelector('.portHeader').classList.remove('slideOver');
