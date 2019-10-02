@@ -379,6 +379,13 @@ nav a:hover {
        grid-column: 1/4;
   }
 }
+
+.parallax-window {
+    min-height: 200px;
+    background: transparent;
+    opacity: 0.5;
+}
+
 /*****
 ***** SKILLS     ****
                 ****/
@@ -528,6 +535,7 @@ h2 {
 #bootstrap path,
 #css path,
 #sass path,
+#gh path,
 .linkedIn path {
   fill: #777;
   transition: fill .4s ease-out;
@@ -542,7 +550,7 @@ h2 {
 .find {
   text-align: right;
 }
-.text-insert {
+.text-about {
   @media (min-width: $media-break-tab) {
   width: 40vw;
   margin-left: auto;
@@ -625,7 +633,7 @@ h2 {
   width: 30.5vw;
   height: 30.5vw;
   float: left;
-  margin-left: 2vw;
+  // margin-left: 2vw;
   margin-top: 2vw;
   -webkit-clip-path: polygon(50% 12%, 85% 25%, 85% 75%, 50% 88%, 15% 75%, 15% 25%);
   clip-path: polygon(50% 12%, 85% 25%, 85% 75%, 50% 88%, 15% 75%, 15% 25%);

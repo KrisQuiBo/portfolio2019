@@ -239,6 +239,12 @@ a.example.active:hover {
   }
 }
 
+.parallax-window {
+  min-height: 200px;
+  background: transparent;
+  opacity: 0.5;
+}
+
 /*****
 ***** SKILLS     ****
                 ****/
@@ -389,6 +395,7 @@ h2 {
 #bootstrap path,
 #css path,
 #sass path,
+#gh path,
 .linkedIn path {
   fill: #777;
   transition: fill 0.4s ease-out;
@@ -408,7 +415,7 @@ h2 {
 }
 
 @media (min-width: 769px) {
-  .text-insert {
+  .text-about {
     width: 40vw;
     margin-left: auto;
     margin-right: auto;
@@ -498,7 +505,6 @@ h2 {
   width: 30.5vw;
   height: 30.5vw;
   float: left;
-  margin-left: 2vw;
   margin-top: 2vw;
   -webkit-clip-path: polygon(50% 12%, 85% 25%, 85% 75%, 50% 88%, 15% 75%, 15% 25%);
   clip-path: polygon(50% 12%, 85% 25%, 85% 75%, 50% 88%, 15% 75%, 15% 25%);

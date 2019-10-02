@@ -39,7 +39,7 @@ window.addEventListener('DOMContentLoaded', (e) => {
   }
 
   function scrollHighlight() {
-    if (document.documentElement.scrollTop > 200 || document.body.scrollTop > 200) {
+    if (document.documentElement.scrollTop > 195 || document.body.scrollTop > 195) {
       document.querySelector('.myName').classList.add('highlightName');
     } else if (document.documentElement.scrollTop < 155 || document.body.scrollTop < 155){
       document.querySelector('.myName').classList.remove('highlightName');
