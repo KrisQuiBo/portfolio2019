@@ -279,7 +279,7 @@ main {
 
 #about {
   display: flex;
-  background: url(../imgs/LinvilleBw.jpg);
+  background: url(../imgs/LinvilleBw_sm.jpg);
   height: auto;
   background-repeat: no-repeat;
   background-position: center;
