@@ -529,10 +529,22 @@ h2 {
   transition: transform 1.1s ease-in-out;
 }
 
+.revealLinks {
+  transform: scale(2);
+}
+
 .hexag {
   height: 100%;
   width: 100%;
   clip-path: polygon(50% 12%, 85% 25%, 85% 75%, 50% 88%, 15% 75%, 15% 25%);
+}
+
+.repoLink {
+  z-index: 100;
+  text-decoration: none;
+  position: absolute;
+  top: 40%;
+  left: 15%;
 }
 
 img {

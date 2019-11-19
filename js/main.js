@@ -12,6 +12,7 @@ var windowheight = window.innerHeight;
 const skills = document.querySelector('.skills');
 var scrollheight = document.body.scrollHeight;
 let skillsHeight = getComputedStyle(skills).height.split('px')[0];
+let hexagArea = document.querySelectorAll(".hexag");
 
 
 
@@ -61,6 +62,43 @@ window.addEventListener('DOMContentLoaded', (e) => {
       document.querySelector('.portHeader').classList.remove('slideOver');
     }
   }
+
+// const revealLinks = (e) => {
+//   for (let i=0; i < hexag.length; i++) {
+//     hexag[i].classList.add("revealLinks");
+//   }
+// }
+// for(let i=0; i<hexagArea.length;i++) {
+// hexagArea[i].addEventListener('mouseover', function(e) {
+//   for(let i=0;i<hexagArea.length;i++) {
+//     hexag[i].classList.add("revealLinks");
+//   // revealLinks();
+//   }
+// });
+// }
+
+
+var f = function(e) {
+
+  // the event target, can be any element in the page at this point
+  var t = e.target;
+
+  // check if the event target is an img element
+  if(t.tagName.toLowerCase() == 'img') {
+
+    // then toggle its active class
+    t.classList.toggle('revealLinks');
+  }
+}
+
+// add listeners to the window (or on whatever image container you have)
+window.addEventListener('mouseover', f /* call this function f on mouseover */, false);
+window.addEventListener('mouseout', f, false);
+
+
+// hexagArea.addEventListener('mouseout', function() {
+//   hexag[i].classList.remove("revealLinks");
+// })
 
   // function scrollSkills() {
   //   // let skillsHeight = getComputedStyle(header).height.split('px')[0];
