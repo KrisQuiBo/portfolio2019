@@ -91,6 +91,43 @@ var f = function(e) {
   }
 }
 
+// // add listeners to the window (or on whatever image container you have)
+// window.addEventListener('mouseover', f /* call this function f on mouseover */, false);
+// window.addEventListener('mouseout', f, false);
+//
+// for(let i=0; i<cards.length;i++) {
+//   cards[i].addEventListener('mouseover', () => {
+//     let visLink = document.querySelectorAll('repoLink');
+//     visLink[0].classList.toggle('showLink');
+//   })
+// }
+
+
+// for(let i=0; i<cards.length; i++) {
+//   cards[i].addEventListener('mouseover', ()=> {
+//     let addLinks = "";
+//     addLinks +=
+//     `<p class="repoLink">
+//       <a href="https://github.com/KrisQuiBo/portfolio2019/tree/gh-pages">Take me to gitHub repo</a><br><br>
+//       <a href="https://krisquibo.github.io/web_app_dashboard_v3.1/">Take me to example</a>
+//     </p>`;
+//     hexagArea.innerHTML = addLinks;
+//   });
+// }
+//
+// var f = function(e) {
+//
+//   // the event target, can be any element in the page at this point
+//   var t = e.target;
+//
+//   // check if the event target is an img element
+//   if(t.className.toLowerCase() == 'polygBorder') {
+//
+//     // then toggle its active class
+//     t.classList.toggle('revealLinks');
+//   }
+// }
+
 // add listeners to the window (or on whatever image container you have)
 window.addEventListener('mouseover', f /* call this function f on mouseover */, false);
 window.addEventListener('mouseout', f, false);
@@ -124,33 +161,6 @@ window.addEventListener('mouseout', f, false);
 
 
 
-  // closeBtn.addEventListener('click', (e) => {
-  //   modal.style.display = "none";
-  // });
-  //
-  // window.addEventListener('scroll', function(e) {
-  //   for(let i=0; i < cards.length; i++) {
-  //     let scrolled = window.pageYOffset;
-  //
-  //     var scrollamount = (scrolled / (scrollheight-windowheight)) * 100 // get amount scrolled (in %)
-  //
-  //   // cards[i].style.top = -100 + scrollamount + '%';
-  //       // cards[i].style.top = -(scrolled * 5.5) + scrollamount + '%';
-  //       // cards[i].style.top = -(scrolled * 5.5) + 'px';
-  //       cards[i].style.top = -(scrolled * 5.5) + 'px';
-  //       windowheight = scrollheight +(scrolled * 5.5) + 'px';
-  //   }
-  // });
-
- //
- //
- //  function parallaxbubbles(){
- //   var scrolltop = window.pageYOffset // get number of pixels document has scrolled vertically
- //   var scrollamount = (scrolltop / (scrollheight-windowheight)) * 100 // get amount scrolled (in %)
- //   bubble1.style.top = -scrolltop * .2 + 'px' // move bubble1 at 20% of scroll rate
- //   bubble2.style.top = -scrolltop * .5 + 'px' // move bubble2 at 50% of scroll rate
- //   fish.style.left = -100 + scrollamount + '%';
- // }
 
 
 });

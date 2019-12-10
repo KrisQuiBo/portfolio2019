@@ -629,6 +629,7 @@ h2 {
  }
 .polyg-border {
   position: relative;
+
   shape-outside: polygon(50% 7%, 90% 25%, 90% 75%, 50% 93%, 10% 75%, 10% 25%);
   width: 30.5vw;
   height: 30.5vw;
@@ -648,13 +649,30 @@ h2 {
     margin-left: 0;
   }
 }
+// .polyg-border:hover {
+//   opacity: 0;
+//   transition: opacity .9s ease-out;
+// }
 .rotate-it {
   transform: rotate(-360deg);
   transition: transform 1.1s ease-in-out;
 }
+.repoLink {
+  // z-index: 100;
+  text-decoration: none;
+  position: absolute;
+  top: 40%;
+  left: 15%;
+  visibility: hidden;
+}
+.showLink {
+  visibility: visible;
+}
 
 .revealLinks {
-  transform: scale(2.0);
+  display: block;
+  transition: transform 1.1s ease-in-out;
+  transform: scale(1.1);
 }
 
 .hexag {
@@ -663,13 +681,7 @@ h2 {
   clip-path: polygon(50% 12%, 85% 25%, 85% 75%, 50% 88%, 15% 75%, 15% 25%);
 }
 
-.repoLink {
-  z-index: 100;
-  text-decoration: none;
-  position: absolute;
-  top: 40%;
-  left: 15%;
-}
+
 
 img {
   position: absolute;
