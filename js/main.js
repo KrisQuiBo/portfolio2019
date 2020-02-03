@@ -19,12 +19,12 @@ let hexagArea = document.querySelectorAll(".hexag");
 window.addEventListener('DOMContentLoaded', (e) => {
   console.log('DOM fully loaded and parsed');
 
-  var toggledMenu = drop.addEventListener("click", function() {
-    activeElements.forEach(function(e){
-        e.classList.toggle("active");
-        console.log('click');
-    });
-  });
+  // var toggledMenu = drop.addEventListener("click", function() {
+  //   activeElements.forEach(function(e){
+  //       e.classList.toggle("active");
+  //       console.log('click');
+  //   });
+  // });
   hexag.forEach(function(e) {
     e.classList.add('rotate-it');
   });
