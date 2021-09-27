@@ -46,7 +46,6 @@ header {
 }
 
 .navigation {
-  width: 100vw;
   display: grid;
   text-align: center;
   margin: 1rem;
@@ -84,7 +83,6 @@ header {
 }
 
 nav {
-  position: relative;
   width: 86%;
   max-width: 2680px;
   margin-left: auto;
@@ -131,72 +129,49 @@ nav a:hover {
   transition: all 0.2s ease-in;
 }
 
-.work-menu {
+.work-examples {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.8);
+  text-align: left;
   height: fit-content;
   position: absolute;
   z-index: 100;
-  transform: translateY(-300px);
-  /* left: 68%; */
+  top: -195%;
+  left: 68%;
   transition: all 1000ms ease-in-out 300ms;
 }
-.work-menu.active {
-  transform: translateY(65px);
-  transition: all 1s ease;
-  height: fit-content;
-  width: inherit;
-}
-.closeBtn {
-  color: tomato;
-}
-@media(max-width: 768px) {
-  .closeBtn {
-    position: absolute;
-    color: tomato;
-    right: 0;
-  }
-}
-button, input[type="submit"], input[type="reset"] {
-  background: none;
-  color: inherit;
-  border: none;
-  padding: 0;
-  /* font: inherit; */
-  cursor: pointer;
-  outline: inherit;
-  font-weight: 600;
-  font-size: 1.5rem;
-}
-/* @media (min-width: 1024px) {
-  .work-menu {
+@media (min-width: 1024px) {
+  .work-examples {
+    display: flex;
+    flex-direction: row;
     text-align: center;
     top: 0%;
     left: 130%;
     height: fit-content;
   }
-  .work-menu.active {
+}
+
+.work-examples.active {
+  top: 30%;
+}
+@media (min-width: 769px) {
+  .work-examples.active {
+    top: 90%;
+    right: 0;
+    height: fit-content;
+  }
+}
+@media (min-width: 1024px) {
+  .work-examples.active {
     top: 70%;
     left: 0;
     height: fit-content;
   }
-} */
-
-@media (max-width: 769px) {
-  .work-menu.active {
-    transform: translateY(10px);
-    right: 20%;
-    transition: all 1s ease;
-    flex-direction: column;
-    width: min-content;
-    height: fit-content;
-  }
 }
 
-
-.work-menu a {
+.work-examples a {
   padding-bottom: 0.5rem;
 }
 
@@ -225,7 +200,6 @@ a.example.active:hover {
 }
 
 .drop {
-  position: relative;
   color: inherit;
   font-size: inherit;
   outline: none;
@@ -254,18 +228,9 @@ a.example.active:hover {
 .drop:hover {
   background-color: tomato;
 }
-.reveal {
-  position: fixed;
-  right: 90px;
-  bottom: 90px;
-  transform: translateY(150px);
-  opacity: 0;
-  transition: all 2s ease;
-}
-.show {
-  transform: translateY(0px);
-  opacity: 1;
 
+.invisible {
+  visibility: visible;
 }
 .up {
   /* visibility: hidden; */
@@ -273,9 +238,9 @@ a.example.active:hover {
   z-index: 100;
   position: fixed;
   right: 90px;
-  bottom: 140px;
+  bottom: 90px;
 }
-
+}
 @media (min-width: 769px) {
   .up {
     /* grid-column: 1/3; */
@@ -362,8 +327,11 @@ main {
   background-color: white;
   padding: 1.5rem;
   border: 1px solid #ccc;
-  border-radius: 5px;
   /* margin: 0.5rem; */
+  transition: flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11);
+}
+.card.open {
+  flex: 2;
 }
 
 /* .container {
@@ -490,7 +458,7 @@ h2 {
   text-align: center;
 }
 
-.sectionHeader {
+.pHeadline {
   text-transform: uppercase;
   font-size: 4em;
   color: tomato;
@@ -527,13 +495,13 @@ h2 {
                  ****/
 #profilePic {
   position: relative;
-  /* shape-outside: polygon(50% 7%, 90% 25%, 90% 75%, 50% 93%, 10% 75%, 10% 25%); */
-  /* width: 44.5vw;
-  height: 44.5vw; */
+  shape-outside: polygon(50% 7%, 90% 25%, 90% 75%, 50% 93%, 10% 75%, 10% 25%);
+  width: 44.5vw;
+  height: 44.5vw;
   float: right;
   margin-right: -10%;
-  /* clip-path: polygon(50% 12%, 85% 25%, 85% 75%, 50% 88%, 15% 75%, 15% 25%); */
-  background: url(../imgs/KQB-CROP.jpg);
+  clip-path: polygon(50% 12%, 85% 25%, 85% 75%, 50% 88%, 15% 75%, 15% 25%);
+  background: url(../imgs/KQBportrait.jpg);
   background-size: 54.5vw;
 }
 @media (min-width: 769px) {
@@ -594,6 +562,13 @@ h2 {
 .showLink {
   visibility: visible;
 }
+
+.revealLinks {
+  display: block;
+  transition: transform 1.1s ease-in-out;
+  transform: scale(1.1);
+}
+
 .hexag {
   height: 100%;
   width: 100%;

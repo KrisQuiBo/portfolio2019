@@ -500,7 +500,12 @@ main {
 svg {
   margin: .7rem;
 }
-
+.painIntheButt {
+  color: red;
+}
+.untilt {
+  transform: rotate(0deg);
+}
 .tiltHeadline {
   transform: rotate(-21deg);
   position: absolute;
