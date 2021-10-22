@@ -80,9 +80,9 @@ function toggleAngle() {
 
   function scrollSlide() {
     if (document.documentElement.scrollTop > 975 || document.body.scrollTop > 975) {
-      document.querySelector('.portHeader').classList.add('slideOver');
+      portHead.classList.add('slideOver');
     } else if (document.documentElement.scrollTop < 600 || document.body.scrollTop < 600) {
-      document.querySelector('.portHeader').classList.remove('slideOver');
+      portHead.classList.remove('slideOver');
     }
   }
 

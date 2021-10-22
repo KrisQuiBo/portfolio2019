@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-
+        <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/styles.css">
         <script src="https://kit.fontawesome.com/2fda3b5aaa.js"></script>
         <script
@@ -17,7 +17,7 @@
             <span id="tilt">Kristen <br> Quinlan-Boyce</span>
               <nav>
                 <a href="#about">About & Connect</a>
-                <a href="#cards" class="drop active-element">Work & Projects</a>
+                <a href="#" class="drop active-element">Work & Projects</a>
                 <div class="work-menu active-element">
                   <a href="#webDesign" class="example active-element">Web Design</a>
                   <a href="#webDev" class="example active-element">Web Development</a>
@@ -37,7 +37,7 @@
           </div>
           <div class="polyg-border" id="profilePic">
           </div>
-          <br>
+          <!-- <br> -->
           <p class="text-about">
             I am a front end web developer with a design background and a love of code. I'm looking for graphic design and front-end web development opportunities, either remote, or in the DC metro region.
           </p>
@@ -160,36 +160,36 @@
         <p>More to come…</p>
       </div>
       </section>
+      <div class="parallax-window workParallax" data-parallax="scroll" data-image-src="imgs/JP149R.gif"></div>
+      <div class="workHeader"> <h1 class="portHeader">Work</h1></div>
       <div class="parallax-window" data-parallax="scroll" data-image-src="imgs/JP149R.gif"></div>
-      <div class="sectionHeader" id="cards"> <h1 class="portHeader">Work</h1></div>
-      <div class="parallax-window" data-parallax="scroll" data-image-src="imgs/JP149R.gif"></div>
-      <h1 class="sectionHeader"> <div class="webDesHeader" id="webDesign">Web Design</div></h1>     
-        <section class="webWork">
+      <section class="webWork">
+        <h2 class="sectionHeader" id="webDesign">Web Design</h2>     
             <div class="cards-container">
               <!-- B2B -->
               <div class="card">
-                    <h2 class="tiltHeadline">The B2B Project</h2>
+                    <h3 class="tiltHeadline">The B2B Project</h3>
                     <div class="polyg-border">
                       <a href="https://www.theB2BProject.org" >
                         <img src="imgs/B2B-CROP.jpg" alt="The B2B Project website" class=" hexag">
                       </a>
                     </div>
                     <p class="text-insert">
-                      <br><br>
-                      A website design project…
+                      <!-- <br><br> -->
+                      A website design project that also included identifying and implementing a member-management system. This site was designed on paper, taken to Adobe XD for mock-ups, and ultimately created on the Wix platform. 
                     </p>
               </div>
-            <!-- tasklist -->
-            <div class="card">
-              <h2 class="tiltHeadline">Youth4Abolition</h2>
+            <!-- Y4A -->
+            <div class="card graphicD">
+              <h3 class="tiltHeadline">Youth4Abolition</h3>
               <div class="polyg-border">
                 <a href="https://www.youth4abolition.com" >
                   <img src="imgs/Y4A-CROP.jpg" alt="Youth4Abolition website" class=" hexag">
                 </a>
               </div>
               <p class="text-insert">
-                <br><br>
-                Website design…
+                <!-- <br><br> -->
+                Website design for the non-profit and world-changing organization, Youth4Abolition. This project was a complete re-do of their web presence and included some infographic design. It was a month's long collaboration with the dynamic duo behind the organization who provided the content.
               </p>
             </div>
               <!-- Tipper -->
@@ -207,27 +207,27 @@
             </div> -->
           </div>
           </section>
-      <section class="work">
-      <!-- WORK -->
-      <!-- <div class="sectionHeader" id="cards"> <h1 class="portHeader">Work</h1></div>            -->
+      <section class="devWork">
       <div class="parallax-window" data-parallax="scroll" data-image-src="imgs/JP149R.gif"></div>
-      <h1 class="sectionHeader"> <div class="webDesHeader" id="webDev">Web Development Projects</div></h1>     
+      <h2 class="sectionHeader">
+         <div class="webDesHeader" id="webDev">Web Development Projects</div>
+        </h2>     
         <div class="cards-container">
         <!-- Web Development Projects -->
           <!-- yourApp -->
           <div class="card">           
-                <h2 class="tiltHeadline">YourApp</h2 >
+                <h3 class="tiltHeadline">YourApp</h3>
                 <div class="polyg-border">
                   <a href="https://krisquibo.github.io/web_app_dashboard_v3.1/">
                     <img src="imgs/yourApp-CROP.jpg" height = "300" width = "300" alt="Employee Dashboard" class=" hexag">
                   </a>
                 </div>
-                <p class="text-insert"><br><br>YourApp is an interactive dashboard for a web application which uses SVG graphics and JavaScript. With the use of Chart.js, with object-oriented javascript in mind, the data was manipulated to customize the chart data & visual representation. This dashboard also uses local storage to save settings.</p>
+                <p class="text-insert">YourApp is an interactive dashboard for a web application which uses SVG graphics and JavaScript. With the use of Chart.js, with object-oriented javascript in mind, the data was manipulated to customize the chart data & visual representation. This dashboard also uses local storage to save settings.</p>
           </div>
           <!-- Code review -->
           <div class="card">
                 <a href="https://krisquibo.github.io/online_registration_v4/">
-                  <h2 class="tiltHeadline">The Code <br> Review</h2>
+                  <h3 class="tiltHeadline">The Code Review</h3>
                 </a>
                 <div class="polyg-border">
                   <a href="https://krisquibo.github.io/online_registration_v4/">
@@ -235,58 +235,59 @@
                   </a>
                 </div>
                 <p class="text-insert">
-                  <br><br>Built using a wide variety of HTML form input types and attributes and based on supplied mockup files, this project resulted in mobile and desktop versions of a form using media queries, and a "mobile-first" approach.
+                  <!-- <br><br> -->
+                  Built using a wide variety of HTML form input types and attributes and based on supplied mockup files, this project resulted in mobile and desktop versions of a form using media queries, and a "mobile-first" approach.
                 </p>
           </div>
           <!-- photoGallery -->
           <div class="card">
-              <h2 class="tiltHeadline">Photo<br>Gallery</h2>
+              <h3 class="tiltHeadline">PhotoGallery</h3>
               <div class="polyg-border">
                 <a href="https://krisquibo.github.io/photo_gallery_v4/" >
                   <img src="imgs/photoGallery-sm.jpg" alt="Photo Gallery" class=" hexag">
                 </a>
               </div>
               <p class="text-insert">
-                <br><br>
+                <!-- <br><br> -->
                 The interactive photogallery provided more opportunities for javascript practice as well as jquery plugins like lightbox2. One of the project challenges was to use original JavaScript code to implement search box functionality instead of a plugin.
               </p>
           </div>
           <!-- employee directory -->
           <div class="card">
-              <h2 class="tiltHeadline">Employee <br>Directory</h2>
+              <h3 class="tiltHeadline">Employee Directory</h3>
               <div class="polyg-border">
                 <a href="https://krisquibo.github.io/employee_directory_v1/" >
                   <img src="imgs/employeeDirectory_sm.jpg" alt="phrases project" class=" hexag">
                 </a>
               </div>
               <p class="text-insert">
-                <br><br>
+                <!-- <br><br> -->
                 This project was JavaScript-based, using an API to populate the employee directory. A JSON object is requested from the API using fetch and parsed 12 employee's data are listed in a grid with their thumbnail image, full name, email, & location. Clicking the employee’s image or name will open a modal window with more detailed information, such as the employee’s birthday and address.
               </p>
           </div>
           <!-- Snowmageddon -->
           <div class="card">
-              <h2 class="tiltHeadline">Snowma-<br>geddon</h2>
+              <h3 class="tiltHeadline">Snowmageddon</h3>
               <div class="polyg-border">
                 <a href="https://krisquibo.github.io/game_show_app_v1.2/" >
                   <img src="imgs/snowmageddon-sm.jpg" alt="phrases project" class=" hexag">
                 </a>
               </div>
               <p class="text-insert">
-                <br><br>
-                Originally styled like a gameshow, this was a javascript project to which I applied a story for an enhanced user experience, i.e. fun. I couldn't find any suitable milk/tp/eggs/bread icons so I drew my own.
+                <!-- <br><br> -->
+                Originally styled like a gameshow, this was a javascript project to which I applied a story for fun. I couldn't find any suitable milk/tp/eggs/bread icons & illustrated my own.
               </p>
           </div>
           <!--StyleGuide-->
           <div class="card">
-              <h2 class="tiltHeadline">Style<br>Guide</h2>
+              <h3 class="tiltHeadline">Style Guide</h3>
               <div class="polyg-border">
                 <a href="https://krisquibo.github.io/style_guide_v4/" >
                   <img src="imgs/styleGuide-selection.jpg" alt="style guide project" class=" hexag">
                 </a>
               </div>
               <p class="text-insert">
-                <br><br>
+                <!-- <br><br> -->
                 The StyleGuide introduced Sass as a programming tool to add responsive mobile-first styles based on a supplied mock-up.
               </p>
           </div>
@@ -294,63 +295,65 @@
     </section>
     <span class="up reveal"><a href="#top"> <i class="far fa-arrow-alt-circle-up"></i></a></span>
     <div class="parallax-window" data-parallax="scroll" data-image-src="imgs/JP149R.gif"></div>
-    <h1 class="sectionHeader"> <div class="jsHeader" id="javascript">JS Apps & Projects</div></h1>     
+    <h2 class="sectionHeader"> <div class="jsHeader" id="javascript">JS Apps & Projects</div></h2>     
       <section class="apps">
         <div class="cards-container">
           <!-- memory -->
           <div class="card">
-                <h2 class="tiltHeadline">Memory</h2>
+                <h3 class="tiltHeadline">Memory</h3>
                 <div class="polyg-border">
                   <a href="https://krisquibo.github.io/memory/" >
                     <img src="imgs/memory-CROP.jpg" alt="Memory game" class=" hexag">
                   </a>
                 </div>
                 <p class="text-insert">
-                  <br><br>
-                  More JS practice!
+                  <!-- <br><br> -->
+                  Anyone who has embarked on the journey to become a web developer knows that, at some point, one must fly solo. In other words, fly without that co-pilot, the tutorial, and start projects from scratch. This is one such project. I began with an objective, planned the design, worked earnestly for months (here and there) and had to take a peak now and then at solutions to problems I could not solve myself. 
                 </p>
           </div>
         <!-- tasklist -->
         <div class="card">
-          <h2 class="tiltHeadline">TaskList</h2>
+          <h3 class="tiltHeadline">TaskList</h3>
           <div class="polyg-border">
             <a href="https://krisquibo.github.io/Tasklist/" >
               <img src="imgs/taskList-sm.jpg" alt="TaskList app" class=" hexag">
             </a>
           </div>
           <p class="text-insert">
-            <br><br>
+            <!-- <br><br> -->
             This task list was a javascript practice project. It uses both Bootstrap and Materialize for some styling. DOM traversal and local storage were specific skills used for this app.
           </p>
         </div>
           <!-- Tipper -->
         <div class="card">
-              <h2 class="tiltHeadline">Tip-Tip <br>Hooray</h2>
+              <h3 class="tiltHeadline">Tip-Tip Hooray</h3>
               <div class="polyg-border">
                 <a href="https://krisquibo.github.io/tipper/">
                   <img src="imgs/theTipper.png" alt="tip calculator javascript project" class=" hexag">
                 </a>
               </div>
               <p class="text-insert">
-                <br><br>
+                <!-- <br><br> -->
                 Tip-Tip Hooray was a javascript practice project that helped to reinforce DOM selection and manipulation skills and relies on user input and events.
               </p>
         </div>
       </div>
       </section>
       <div class="parallax-window" data-parallax="scroll" data-image-src="imgs/JP149R.gif"></div>
-      <h1 class="sectionHeader"> <div class="jsHeader" id="graphicDesign">Graphic Design</div></h1>     
+      <h2 class="sectionHeader"> <div class="jsHeader" id="graphicDesign">Graphic Design</div></h2>     
       <section class="graphicD">
         <div class="cards-container">
            <!--GraphicDesign-->
         <div class="card">
-          <h2 class="tiltHeadline">Design <br>samples</h2>
+          <h3 class="tiltHeadline">Design Samples</h3>
           <div class="polyg-border">
             <a href="https://krisquibo.github.io/designSamples/" >
               <img src="imgs/designSamples-CROP.jpg" height = "300" width = "300" alt="graphic design samples" class=" hexag">
             </a>
           </div>
-          <p class="text-insert"><br><br>Graphic design and digital production work examples. From logos to package design, as well as a Roman mosaic reconstruction used in the Trompe L'Oeil exhibit.</p>
+          <p class="text-insert">
+            <!-- <br><br> -->
+            Graphic design and digital production work examples. From logos to package design, as well as a Roman mosaic reconstruction used in the Trompe L'Oeil exhibit.</p>
       </div>
         </div>
       </section>

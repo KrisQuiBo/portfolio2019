@@ -33,11 +33,18 @@ p {
   font-size: 0.95rem;
   word-break: break-word;
   hyphens: auto;
+  line-height: 1.4rem;
+  margin-top: 0;
 }
 
 /*****
  ***** MODAL ****
                  ****/
+
+
+
+
+
 /*****
  ***** NAVIGATION****
                  ****/
@@ -84,8 +91,9 @@ header {
 }
 
 nav {
+  display: flex;
   position: relative;
-  width: 86%;
+  width: 95%;
   max-width: 2680px;
   margin-left: auto;
   margin-right: auto;
@@ -96,7 +104,7 @@ nav {
 }
 @media (min-width: 769px) {
   nav {
-    display: flex;
+    /* display: flex; */
     justify-content: flex-end;
     text-align: center;
     width: 60%;
@@ -133,16 +141,16 @@ nav a:hover {
 
 .work-menu {
   display: flex;
-  flex-direction: row;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.8);
   height: fit-content;
   position: absolute;
   z-index: 100;
   transform: translateY(-300px);
-  /* left: 68%; */
+  width: inherit;
   transition: all 1000ms ease-in-out 300ms;
 }
+
 .work-menu.active {
   transform: translateY(65px);
   transition: all 1s ease;
@@ -156,7 +164,7 @@ nav a:hover {
   .closeBtn {
     position: absolute;
     color: tomato;
-    right: 0;
+    right: 2;
   }
 }
 button, input[type="submit"], input[type="reset"] {
@@ -170,31 +178,31 @@ button, input[type="submit"], input[type="reset"] {
   font-weight: 600;
   font-size: 1.5rem;
 }
-/* @media (min-width: 1024px) {
-  .work-menu {
-    text-align: center;
-    top: 0%;
-    left: 130%;
-    height: fit-content;
-  }
-  .work-menu.active {
-    top: 70%;
-    left: 0;
-    height: fit-content;
-  }
-} */
 
 @media (max-width: 769px) {
+  .work-menu {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    height: fit-content;
+    position: absolute;
+    z-index: 100;
+    transform: translateY(-350px);
+    transition: all 1000ms ease-in-out 300ms;
+    width: inherit;
+  }
   .work-menu.active {
-    transform: translateY(10px);
-    right: 20%;
+    transform: translateY(65px);
+    /* right: 20%; */
     transition: all 1s ease;
     flex-direction: column;
-    width: min-content;
+    /* width: min-content; */
     height: fit-content;
+    border: 1px solid #aaa;
+    border-radius: 5px;
   }
 }
-
 
 .work-menu a {
   padding-bottom: 0.5rem;
@@ -241,15 +249,6 @@ a.example.active:hover {
   z-index: 1;
 }
 
-.drop-content a {
-  color: white;
-  padding: 12px 16px;
-  display: block;
-  background: blue;
-  max-width: 160px;
-  text-align: left;
-}
-
 .dropdown:hover, .dropbtn:focus,
 .drop:hover {
   background-color: tomato;
@@ -276,21 +275,28 @@ a.example.active:hover {
   bottom: 140px;
 }
 
-@media (min-width: 769px) {
+/* @media (min-width: 769px) {
   .up {
-    /* grid-column: 1/3; */
+    grid-column: 1/3;
+  }
+} */
+/* @media (min-width: 1024px) {
+  .up {
+    grid-column: 1/4;
+  }
+} */
+@media (max-width: 769) {
+  .parallax-window {
+    opacity: .1;
   }
 }
-@media (min-width: 1024px) {
-  .up {
-    /* grid-column: 1/4; */
-  }
+.workParallax {
+  min-height: 100px;
 }
-
 .parallax-window {
   min-height: 200px;
   background: transparent;
-  opacity: 0.5;
+  opacity: 0.2;
 }
 
 /*****
@@ -344,35 +350,50 @@ main {
 
 .cards-container {
   width: 100%;
-  max-width: 2680px;
-  margin-left: auto;
-  margin-right: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-  /* grid-template-columns: auto; */
-  gap: 1%;
+  grid-template-columns: auto;
+  gap: 2%;
+  margin-top: .5%;
 }
 
 .card {
-  /* display: flex; */
-  margin-left: 0vw;
+  display: block;
+  width: 85%;
+  margin-left: auto;
   margin-right: auto;
-  width: 100%;
+  margin-bottom: 2%;
   position: relative;
   background-color: white;
-  padding: 1.5rem;
+  padding: 1.2rem;
   border: 1px solid #ccc;
   border-radius: 5px;
   /* margin: 0.5rem; */
 }
+@media (min-width: 768px) {
+  .card {
+    margin-left: 0vw;
+    margin-right: auto;
+    width: 100%;
+    position: relative;
+    background-color: white;
+    padding: .5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .graphicD .card {
+    width: 45%;
+  }
+  .cards-container {
+    width: 100%;
+    max-width: 2680px;
 
-/* .container {
-  position: relative;
-  background-color: white;
-  padding: 1.5rem;
-  border: 1px solid #ccc;
-  margin: 0.5rem;
-} */
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    /* grid-template-columns: auto; */
+    gap: 1%;
+  }
+}
 
 .connect {
   border: 1px solid #fefaf1;
@@ -380,8 +401,13 @@ main {
 }
 
 .myName {
+  color: #656565;
+  transition: 0.5s ease-in;
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
-  padding: 1.5vw;
+  padding: 3%;
 }
 
 .myName p {
@@ -400,13 +426,10 @@ main {
 }
 
 .highlightName {
-  color: #656565;
   background-color: aliceblue;
   border: 2px solid tomato;
   transition: 0.5s ease-in;
-  width: max-content;
-  margin-left: auto;
-  margin-right: auto;
+  
 }
 
 svg {
@@ -418,31 +441,30 @@ svg {
 }
 
 .tiltHeadline {
-  position: absolute;
+  /* position: absolute;
   top: 3%;
-  left: 1%;
-  font-size: 4vw;
+  left: 1%; */
+  font-size: 2rem;
   line-height: 3.75vw;
   transition: 1s ease-in-out;
+  margin-bottom: 0;
 }
 @media (min-width: 769px) {
   .tiltHeadline {
-    font-size: 3vw;
+    /* font-size: 3vw; */
     line-height: 2.75vw;
   }
 }
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
   .tiltHeadline {
     font-size: 2vw;
     line-height: 2vw;
-    top: 3%;
-    left: 3%;
+    /* top: 3%;
+    left: 3%; */
   }
-}
+} */
 
-h2 {
-  text-align: right;
-}
+
 
 @media (min-width: 1024px) {
   .space {
@@ -492,14 +514,26 @@ h2 {
 
 .sectionHeader {
   text-transform: uppercase;
-  font-size: 4em;
+  font-size: 2.5rem;
   color: tomato;
   text-align: center;
   background: aliceblue;
   padding: 2%;
   margin-bottom: 0;
   margin-top: 0;
-  letter-spacing: -0.3rem;
+  /* letter-spacing: 0.1rem; */
+}
+.workHeader {
+  background: tomato;
+  color: aliceblue;
+  font-size: 3rem;
+  text-transform: uppercase;
+  /* font-size: 4em; */
+  text-align: center;
+  padding: 2%;
+  margin-bottom: 0;
+  margin-top: 0;
+  letter-spacing: 0.3rem;
 }
 
 .portHeader {
@@ -528,19 +562,20 @@ h2 {
 #profilePic {
   position: relative;
   /* shape-outside: polygon(50% 7%, 90% 25%, 90% 75%, 50% 93%, 10% 75%, 10% 25%); */
-  /* width: 44.5vw;
-  height: 44.5vw; */
-  float: right;
-  margin-right: -10%;
+  /* float: right; */
+  
   /* clip-path: polygon(50% 12%, 85% 25%, 85% 75%, 50% 88%, 15% 75%, 15% 25%); */
-  background: url(../imgs/KQB-CROP.jpg);
-  background-size: 54.5vw;
+  background: no-repeat bottom url(../imgs/KQB-CROP.jpg);
+  background-size: 64.5vw;
 }
 @media (min-width: 769px) {
   #profilePic {
     width: 35vw;
     height: 35vw;
+    float: right;
+    /* margin-right: -10%; */
     background-size: 45vw;
+    background-position: 25% -45%;
     margin-right: 0;
   }
 }
@@ -548,18 +583,22 @@ h2 {
   #profilePic {
     width: 25vw;
     height: 25vw;
+    float: right;
+    /* margin-right: -10%; */
+    background-position: 25% -25%;
     background-size: 35vw;
     margin-left: 1vw;
   }
 }
 
 .polyg-border {
-  position: relative;
-  shape-outside: polygon(50% 7%, 90% 25%, 90% 75%, 50% 93%, 10% 75%, 10% 25%);
-  width: 30.5vw;
-  height: 30.5vw;
-  float: left;
-  margin-top: 2vw;
+  flex: 0 0 120px;
+/* position: relative; */
+  /* shape-outside: polygon(50% 7%, 90% 25%, 90% 75%, 50% 93%, 10% 75%, 10% 25%); */
+  width: 70vw;
+  height: 70vw;
+  /* float: left;
+  margin-top: 2vw; */
   -webkit-clip-path: polygon(50% 12%, 85% 25%, 85% 75%, 50% 88%, 15% 75%, 15% 25%);
   clip-path: polygon(50% 12%, 85% 25%, 85% 75%, 50% 88%, 15% 75%, 15% 25%);
   background-color: #ccc;
@@ -568,15 +607,16 @@ h2 {
   .polyg-border {
     width: 35vw;
     height: 35vw;
+    float: left;
   }
 }
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
   .polyg-border {
     width: 18vw;
     height: 18vw;
     margin-left: 0;
   }
-}
+} */
 
 .rotate-it {
   transform: rotate(-360deg);
@@ -639,4 +679,4 @@ i a {
   text-decoration: none;
 }
 
-/*# sourceMappingURL=styles.css.map */
+# sourceMappingURL=styles.css.map
