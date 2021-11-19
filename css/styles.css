@@ -36,7 +36,11 @@ p {
   line-height: 1.4rem;
   margin-top: 0;
 }
-
+.last {
+  text-align: center;
+  font-size: 1.2rem;
+  color: tomato;
+}
 /*****
  ***** MODAL ****
                  ****/
@@ -101,6 +105,7 @@ nav {
   margin-bottom: 1.5rem;
   border-bottom: 1px solid #ccc;
   padding-bottom: 0.5rem;
+  justify-content: space-around;
 }
 @media (min-width: 769px) {
   nav {
@@ -164,7 +169,8 @@ nav a:hover {
   .closeBtn {
     position: absolute;
     color: tomato;
-    right: 2;
+    right: 4px;
+    top: 3px;
   }
 }
 button, input[type="submit"], input[type="reset"] {
@@ -298,7 +304,9 @@ a.example.active:hover {
   background: transparent;
   opacity: 0.2;
 }
-
+.placeholder {
+  opacity: 0.3;
+}
 /*****
 ***** SKILLS     ****
                 ****/
@@ -379,9 +387,9 @@ main {
     border: 1px solid #ccc;
     border-radius: 5px;
   }
-  .graphicD .card {
+  /* .graphicD .card {
     width: 45%;
-  }
+  } */
   .cards-container {
     width: 100%;
     max-width: 2680px;
@@ -404,8 +412,7 @@ main {
   color: #656565;
   transition: 0.5s ease-in;
   width: max-content;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 10%;
   text-align: center;
   padding: 3%;
 }
@@ -605,9 +612,9 @@ svg {
 }
 @media (min-width: 769px) {
   .polyg-border {
-    width: 35vw;
-    height: 35vw;
-    float: left;
+    width: 30vw;
+    height: 30vw;
+    /* float: left; */
   }
 }
 /* @media (min-width: 1024px) {
@@ -679,4 +686,4 @@ i a {
   text-decoration: none;
 }
 
-# sourceMappingURL=styles.css.map
+#sourceMappingURL=styles.css.map

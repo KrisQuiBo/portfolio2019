@@ -14,6 +14,8 @@ let tiltHeadline = document.querySelectorAll('.tiltHeadline');
 const upBtn = document.querySelector('.up');
 const portHead = document.querySelector('.portHeader');
 const closeBtn = document.querySelector('.closeBtn');
+const cardsContainer = document.querySelector('.cards-container');
+const gridComputedStyle = window.getComputedStyle(cardsContainer);
 
 window.addEventListener('DOMContentLoaded', (e) => {
   console.log('DOM fully loaded and parsed');
@@ -63,7 +65,7 @@ function toggleAngle() {
  tiltHeadline.forEach(tilt => {tilt.addEventListener('mouseover', toggleAngle)});
  
   function scrollHighlight() {
-    if (document.documentElement.scrollTop > 195 || document.body.scrollTop > 195) {
+    if (document.documentElement.scrollTop > 10 || document.body.scrollTop > 10) {
       document.querySelector('.myName').classList.add('highlightName');
     } else if (document.documentElement.scrollTop < 155 || document.body.scrollTop < 155){
       document.querySelector('.myName').classList.remove('highlightName');
